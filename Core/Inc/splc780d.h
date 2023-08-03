@@ -53,9 +53,9 @@
 #define LCD_SHIFT_DISPLAY_RIGHT     (0x1C)
 
 /*  Function Set */
-#define LCD_FUNC_8-BIT              (0x30)  //8-bit interface mode
-#define LCD_FUNC_2-LINE             (0x28)
-#define LCD_FUNC_SYM-5x11           (0x24)
+#define LCD_FUNC_8BIT              (0x30)  //8-bit interface mode
+#define LCD_FUNC_2LINE             (0x28)
+#define LCD_FUNC_SYM5x11           (0x24)
 
 #define LCD_TO_LINE_1               (0x0C)
 #define LCD_TO_LINE_2               (0x0C)

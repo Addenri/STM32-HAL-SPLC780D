@@ -30,17 +30,17 @@ void LCD_Init(LCD_HandleTypeDef *hlcd, I2C_HandleTypeDef *hi2c, uint8_t i2c_addr
   HAL_Delay(40);
   if(HAL_I2C_IsDeviceReady(hlcd->hi2c, hlcd->address, 1, HAL_MAX_DELAY) != HAL_OK)
 	Error_Handler();
-  LCD_Write(&hlcd, LCD_CLEAR, LCD_RS_INSTRUCTION);
+  LCD_Write(hlcd, LCD_CLEAR, LCD_RS_INSTRUCTION);
 }
 
 void LCD_Print(LCD_HandleTypeDef *hlcd, char *Text)
 {
   while(*Text)
   {
-    if(*Text == '\n')
+    //if(*Text == '\n')
 
       //LCD_Write(hlcd, 0xC0, LCD_RS_INSTRUCTION);
-    else
+    //else
       LCD_Write(hlcd, (uint8_t)(*Text), LCD_RS);
     Text++;
   }
